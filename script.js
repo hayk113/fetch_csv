@@ -2,7 +2,6 @@
 async function getData() {
     const response = await fetch('task.csv');
     const data = await response.text();
-    // console.log(data);
     let tbl = document.createElement('table');
     const table = data.split('\n');
     table.forEach(row => {
@@ -26,9 +25,6 @@ async function getData() {
         tbl_cell.appendChild(text2);
         tbl_cell.appendChild(text3);
         tbl_cell.appendChild(text4);
-        
-       
-       //console.log(firstcol, thirdcol, fourthcol, last)
     })
     document.body.appendChild(tbl);
 }
